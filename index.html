@@ -1,52 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Convertor Hub</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!--For all the components-->
-    <div class="main-container">
+  <div class="main-container">
+    <div class="container">
+      <header class="heading">
+        <h2>Convertor Hub</h2>
+        <p>A collection of useful conversion tools.</p>
+      </header>
 
-        <!--Box Container-->
-<div class="container">
-     <!--Heading-->
-            <header class="heading">
-                <h2>Convertor Hub</h2>
-                <p>A collection of useful conversion tools.</p>
-            </header>
-        <!--The types of conversions Buttons-->
-        <div class="conversion-container">
-            <section class="conversions">
-            <div class="tab">
-                <button class="tab" onclick="openContent(event,'File Transfer')">File Transfer</button>
-                <button class="tab" onclick="openContent(event,'Temperature')">Temperature</button>
-                <button class="tab" onclick="openContent(event,'Scientific Notation')">Scientific Notation</button>
-                <button class="tab" onclick="openContent(event,'Metric Prefix')">Metric Prefix</button>
-             </div> 
+      <!-- Conversion buttons -->
+      <div class="conversion-container">
+        <button onclick="openContent(event, 'file_transfer')">File Transfer</button>
+        <button onclick="openContent(event, 'temperature')">Temperature</button>
+        <button onclick="openContent(event, 'scientific')">Scientific Notation</button>
+        <button onclick="openContent(event, 'metrix')">Metric Prefix</button>
+      </div>
 
-            </section>
-            </div>
+      <!-- Tab Content -->
+      <div id="file_transfer" class="tab-content">
+        <h3>File Transfer Time Calculator</h3>
 
-            <!--tab content-->
-            <div id="file_transfer" class="tab-content">
-            
+        <label for="fileSize">File Size:</label>
+        <input type="number" id="fileSize" placeholder="Enter file size" />
+        <select id="unit">
+          <option value="GB">Gigabytes (GB)</option>
+          <option value="MB">Megabytes (MB)</option>
+        </select>
+         <button onclick="calculateTime()">Calculate</button>
+
+        <label for="speed">Internet Speed:</label>
+        <input type="number" id="speed" placeholder="Enter speed" value="20" min="0" />
+        <select id="speedUnit">
+          <option value="Mbps">Megabits/sec (Mbps)</option>
+          <option value="MBps">Megabytes/sec (MBps)</option>
+        </select>
+         <button onclick="calculateTime()">Calculate</button>
+
+       
+
+        <div class="result" id="result"></div>
+      </div>
+
+      <!--Temperature Conversion-->
+
+      <div id="temperature" class="tab-content" style="display:none;">
+        <h3>Temperature Conversion</h3>
+        <p>Coming soon...</p>
+      </div>
 
 
-            </div>
+      <!--Scientific Notation Conversion-->
 
-          <div id="temperature" class="tab-content">
-             
+      <div id="scientific" class="tab-content" style="display:none;">
+        <h3>Scientific Notation</h3>
+        <p>Coming soon...</p>
+      </div>
 
-            </div>
 
-        
-
+      <!--Metrix conversion-->
+      <div id="metrix" class="tab-content" style="display:none;">
+        <h3>Metric Prefix Conversion</h3>
+        <p>Coming soon...</p>
+      </div>
     </div>
-    </div>
-    
+  </div>
+
+  <script src="script.js"></script>
     
 </body>
 </html>

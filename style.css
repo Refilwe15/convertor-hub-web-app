@@ -1,72 +1,69 @@
-body{
-    padding : 0px;
-    margin : 0px;
-    background-color: white;
+body {
+  padding: 0;
+  margin: 0;
+  background-color: white;
 }
+
 .main-container {
-    display: flex;
-    align-items: center;
-    height: 100dvh;
-    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
 }
-/*box*/
+
 .container {
-   border : 2px ;
-   width : 70%;
-   height: 70vh;
-   margin: auto;
-   background-color: rgb(202, 188, 188);
-   border-radius: 5px;
-   
-}
-header{
-    text-align: center;
-}
-/*buttons layout*/
-.conversion-container{
-      border : 2px white;
-      height : 4.5vh;
-      width : 38%;
-    margin-left: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-      margin-right: auto;
-      background-color: white;
-      border-radius : 5px;
-   
-}
-/*buttons Decoration*/
-button {
-    background-color: rgb(202, 188, 188);
-    border-color: white;
-    cursor: pointer;
-    font-size: 12px;
-    border-radius : 5px;
-    box-shadow: inset;
-    padding : 5px;
-    transition: background 0.2s;
+  border: 2px solid #ccc;
+  width: 70%;
+  background-color: rgb(202, 188, 188);
+  border-radius: 5px;
+  padding: 20px;
 }
 
-button:hover {
-    background-color: rgb(163, 145, 145);
-}
-buttons{
-  background-color : rgb(202, 188, 188);
-}
-.tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
+header {
+  text-align: center;
 }
 
-/* Style the buttons that are used to open the tab content */
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
+/* Buttons horizontally aligned */
+.conversion-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.conversion-container button {
+  padding: 10px 12px;
+  border-radius: 5px;
+  border: 1px solid white;
+  background-color: rgb(202, 188, 188);
   cursor: pointer;
-  padding: 14px 16px;
   transition: 0.3s;
+}
+
+.conversion-container button:hover {
+  background-color: rgb(163, 145, 145);
+}
+
+/* Hide tab content by default */
+.tab-content {
+  display: none;
+  border  : 1px solid #ccc;
+  padding: 20px;
+  margin-top: 10px;
+  background-color: white;
+  border-radius: 5px;
+  width : 45%;
+  margin : auto ;
+}
+
+/* Show only the first tab by default */
+#file_transfer {
+  display: block;
+}
+
+label, input, select {
+  display: block;
+  margin: 8px 0;
+  width: 100%;
+  max-width: 400px;
 }
