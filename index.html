@@ -25,14 +25,12 @@
       <!-- Tab Content -->
       <div id="file_transfer" class="tab-content">
         <h3>File Transfer Time Calculator</h3>  
-
         <label for="fileSize">File Size:</label>
         <input type="number" id="fileSize" placeholder="Enter file size" />
         <select id="unit">
           <option value="GB">Gigabytes (GB)</option>
           <option value="MB">Megabytes (MB)</option>
         </select>
-        
 
         <label for="speed">Internet Speed:</label>
         <input type="number" id="speed" placeholder="Enter speed" value="20" min="0" />
@@ -42,47 +40,36 @@
         </select>
         <div class="btn">
          <button onclick="calculateTime()" class="convert-btn">Calculate</button>
-
        </div>
-
-
-        <div class="result" id="result"></div>
-     
+        <div class="result" id="file-result"></div>
       </div>
 
       <!--Temperature Conversion-->
-
       <div id="temperature" class="tab-content" style="display:none;">
         <h3>Temperature Conversion</h3>
-        <label for="temp" id="temp">Value to convert :</label>
+        <label for="temp">Value to convert :</label>
         <input type="number" id="temp" placeholder="Enter temparature" value="32">
         <label for="temp">From :</label>
         <select id="tempUnit">
           <option value="celcius">Celcius</option>
           <option value="fahrenheit">Fahrenheit</option>
-
         </select>
         <div class="btn">
-        <button onclick="calculateTemp()" class="convert-btn">Calculate</button>
-</div>
-         <div class="result" id="result"></div>
-         
+          <button onclick="calculateTemp()" class="convert-btn">Calculate</button>
+        </div>
+        <div class="result" id="temp-result"></div>
       </div>
 
-
       <!--Scientific Notation Conversion-->
-
       <div id="scientific" class="tab-content" style="display:none;">
         <h3>Scientific Notation</h3>
         <label for="science">Standard Number</label>
-        <input type="decimal" id ="science" placeholder="56.4">
+        <input type="number" id="science" placeholder="56.4">
         <div class="btn">
-        <button onclick="scientificNotation()" class="convert-btn">Convert</button>
- </div>
-         <div class="result" id="result"></div>
-         </div>
-     
-
+          <button onclick="scientificNotation()" class="convert-btn">Convert</button>
+        </div>
+        <div class="result" id="sci-result"></div>
+      </div>
 
       <!--Metrix conversion-->
       <div id="metrix" class="tab-content" style="display:none;">
@@ -91,34 +78,37 @@
         <input type="number" id="metric">
         <div class="labels">
           <label for="metric">From :</label>
-          <select id="metricUnits">
+          <select id="metricUnitsFrom">
             <option>Kilo(k)</option>
             <option>mega(M)</option>
             <option>milli(m)</option>
             <option>nano</option>
           </select>
 
-
-        <label for="metric">To:</label>
-          <select id="metricUnits">
+          <label for="metric">To:</label>
+          <select id="metricUnitsTo">
             <option>Kilo(k)</option>
             <option>mega(M)</option>
             <option>milli(m)</option>
             <option>nano</option>
           </select>
-   
-
         </div>
         <div class="btn">
-               <button onclick="metricPrefix()" class="convert-btn">Convert</button>
-</div>
-         <div class="result" id="result"></div>
-       
+          <button onclick="metricPrefix()" class="convert-btn">Convert</button>
+        </div>
+        <div class="result" id="metric-result"></div>
       </div>
     </div>
   </div>
 
+  <!-- Modal Styling -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>This is a modal window.</p>
+    </div>
+  </div>
+
   <script src="script.js"></script>
-    
 </body>
 </html>
