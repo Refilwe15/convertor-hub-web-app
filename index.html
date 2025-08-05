@@ -24,7 +24,7 @@
 
       <!-- Tab Content -->
       <div id="file_transfer" class="tab-content">
-        <h3>File Transfer Time Calculator</h3>
+        <h3>File Transfer Time Calculator</h3>  
 
         <label for="fileSize">File Size:</label>
         <input type="number" id="fileSize" placeholder="Enter file size" />
@@ -32,7 +32,7 @@
           <option value="GB">Gigabytes (GB)</option>
           <option value="MB">Megabytes (MB)</option>
         </select>
-         <button onclick="calculateTime()">Calculate</button>
+        
 
         <label for="speed">Internet Speed:</label>
         <input type="number" id="speed" placeholder="Enter speed" value="20" min="0" />
@@ -40,18 +40,33 @@
           <option value="Mbps">Megabits/sec (Mbps)</option>
           <option value="MBps">Megabytes/sec (MBps)</option>
         </select>
-         <button onclick="calculateTime()">Calculate</button>
+        <div class="btn">
+         <button onclick="calculateTime()" class="convert-btn">Calculate</button>
 
-       
+       </div>
+
 
         <div class="result" id="result"></div>
+     
       </div>
 
       <!--Temperature Conversion-->
 
       <div id="temperature" class="tab-content" style="display:none;">
         <h3>Temperature Conversion</h3>
-        <p>Coming soon...</p>
+        <label for="temp" id="temp">Value to convert :</label>
+        <input type="number" id="temp" placeholder="Enter temparature" value="32">
+        <label for="temp">From :</label>
+        <select id="tempUnit">
+          <option value="celcius">Celcius</option>
+          <option value="fahrenheit">Fahrenheit</option>
+
+        </select>
+        <div class="btn">
+        <button onclick="calculateTemp()" class="convert-btn">Calculate</button>
+</div>
+         <div class="result" id="result"></div>
+         
       </div>
 
 
@@ -59,14 +74,46 @@
 
       <div id="scientific" class="tab-content" style="display:none;">
         <h3>Scientific Notation</h3>
-        <p>Coming soon...</p>
-      </div>
+        <label for="science">Standard Number</label>
+        <input type="decimal" id ="science" placeholder="56.4">
+        <div class="btn">
+        <button onclick="scientificNotation()" class="convert-btn">Convert</button>
+ </div>
+         <div class="result" id="result"></div>
+         </div>
+     
 
 
       <!--Metrix conversion-->
       <div id="metrix" class="tab-content" style="display:none;">
         <h3>Metric Prefix Conversion</h3>
-        <p>Coming soon...</p>
+        <label>Value :</label>
+        <input type="number" id="metric">
+        <div class="labels">
+          <label for="metric">From :</label>
+          <select id="metricUnits">
+            <option>Kilo(k)</option>
+            <option>mega(M)</option>
+            <option>milli(m)</option>
+            <option>nano</option>
+          </select>
+
+
+        <label for="metric">To:</label>
+          <select id="metricUnits">
+            <option>Kilo(k)</option>
+            <option>mega(M)</option>
+            <option>milli(m)</option>
+            <option>nano</option>
+          </select>
+   
+
+        </div>
+        <div class="btn">
+               <button onclick="metricPrefix()" class="convert-btn">Convert</button>
+</div>
+         <div class="result" id="result"></div>
+       
       </div>
     </div>
   </div>
